@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState} from 'react'
 import { v4 as uuidv4 } from 'uuid'
 import InputTodo from '@/components/InputTodo'
 import TodoList from '@/components/TodoList'
@@ -8,7 +8,8 @@ import { todos as todosData } from '@/data/todoData'
 function TodoApp() {
     const [todos, setTodos] = useState(todosData)
 
-    //Function to toggle the completion status of a ToDo item
+
+     //Function to toggle the completion status of a ToDo item
     const handleChange = (id) => {
         /*
             map through the existing tasks (prevState) one by one (which we'll refer to as 'todo') and for 
@@ -28,7 +29,6 @@ function TodoApp() {
         })
     }
 
-
     //Function to remove a ToDo item from the 'todos' state variable corresponding to a specific ID
     const deleteTodo = (id) => {
         /*
@@ -39,7 +39,6 @@ function TodoApp() {
             return prevState.filter(todo => todo.id !== id)
         })
     }
-
 
 
     const addTodo = (title) => {
