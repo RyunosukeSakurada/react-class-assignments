@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , memo} from 'react'
 
 function InputTodo({ addTodo }) {
     const [title, setTitle] = useState('')
@@ -43,4 +43,4 @@ function InputTodo({ addTodo }) {
     )
 }
 
-export default InputTodo
+export default memo(InputTodo)
